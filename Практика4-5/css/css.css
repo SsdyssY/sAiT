@@ -1,29 +1,148 @@
-#logo{
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+margin: 0;
+padding: 0;
+font-family: Arial;
+font-size: 12pt;
+background: #f0f0f0;
+}
+@font-face {
+    font-family: Intro;
+    src: url(../fonts/Intro.otf);
+}
+@font-face {
+    font-family:Arsenal;
+    src: url(../fonts/arsenal-regular.woff2);
+}
+@media (max-width: 991px)
+.footer-center {
+    text-align: center;
+}
+.logo{
     width: 1200px; /* Ширина */
     padding: 10px; /* Внутренний отступ */
     margin: 0 auto; /* Выравнивание по центру */
+    font-family: Intro; /* Шрифт */
 }
 /* Шапка */
-#header{
+.header{
     height: 80px; /* Высота */
  /* Фоновый цвет */
     margin-bottom: 10px; /* Отступ снизу */
 }
 /* Сайдбар */
-#menu{
+.menu{
     height: 80px; /* Высота */
     width: 200px; /* Ширина */
     margin-bottom: 10px; /* Отступ снизу */
     float: left; /* Левое обтекание */
 }
-/* Сайдбар */
-#content{
+/* Контент */
+.content{
     height: 80px; /* Высота */
     width: 690px; /* Ширина */
     margin: 0 0 10px 210px; /* Наружные отступы */
 }
 /* Подвал */
-#footer{
-    height: 80px; /* Высота */
-    margin-bottom: 10px; /* Отступ снизу */
+.footer{
+    font-family: Arsenal;
+    height: 50px; /* Высота */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: #666666;
+}
+/*стилизуем менюшку*/
+.hidden-menu {
+display: block;
+position: fixed;
+list-style:none;
+padding: 10px;
+margin: 0;
+box-sizing: border-box;
+width: 200px;
+background-color: #2b343c;
+height: 100%;
+top: 0;
+left: -200px;
+transition: left .2s;
+z-index: 2;
+-webkit-transform: translateZ(0);
+-webkit-backface-visibility: hidden;
+}
+.hidden-menu li a {text-decoration: none; color:#cacaca;}
+.hidden-menu li a:hover {color:#fff;}
+/*скрываем инпут чекбокс*/
+.hidden-menu-ticker {
+display: none;
+}
+/*общие стили значка-гамбургера, самого лэйбла*/
+.btn-menu {
+color: #fff;
+background-color: #fff;
+padding: 2px;
+position: fixed;
+top: 5px;
+left: 5px;
+cursor: pointer;
+transition: left .23s;
+z-index: 3;
+width: 20px;
+-webkit-transform: translateZ(0);
+-webkit-backface-visibility: hidden;
+}
+/*общие стили полосок*/
+.btn-menu span {
+display: block;
+height: 2px;
+background-color: #2b343c;
+margin: 5px 0 0;
+transition: all .1s linear .23s;
+position: relative;
+}
+/*прибиваем к верху лэйбла первую полоску*/
+.btn-menu span.first {
+margin-top: 0;
+}
+/*Фон*/
+.hidden-menu-ticker:checked ~ .btn-menu {
+left: 160px;
+background-color: #2b343c;
+}
+/*Нажатие*/
+.hidden-menu-ticker:checked ~ .hidden-menu {
+left: 0;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.first {
+-webkit-transform: rotate(45deg);
+top: 7px;
+background-color: #fff;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.second {
+opacity: 0;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.third {
+-webkit-transform: rotate(-45deg);
+top: -7px;
+background-color: #fff;
+}
+/*стиль заголовка*/
+header {
+background-color: #fff;
+color: #2487ca;
+text-align: center;
+padding: 5px;
+}
+h1 {
+margin: 0;
+padding: 0;
+font-size: 17px;
+font-weight: normal;
 }
