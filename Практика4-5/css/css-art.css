@@ -1,0 +1,41 @@
+html,body{margin:0;padding:0}
+body{font: 76% arial,sans-serif;
+	text-align:center;
+	background:url(../img/7.jpg);
+text-decoration-color: white;}
+@font-face {
+	font-family: Intro;
+	src: url(../fonts/Intro.otf);
+}
+p{margin:0 10px 10px}
+a{display:block;
+padding:10px}
+div#header h1{font-family: Intro;height:80px;
+	line-height:80px;
+	margin:0;
+color: white;
+text-align:center;}
+div#container{text-align:left}
+div#content p{font-family: Intro;line-height:1.;color: #FFCCCC;}
+div#navigation{
+
+}
+text.{
+	color: white;
+}
+div#extra{
+
+}
+div#footer{
+}
+div#footer p{margin:0;padding:5px 10px}
+div#container{width:700px;margin:0 auto}
+div#navigation{float:left;width:350px}
+div#extra{float:right;width:350px}
+div#footer{clear:both;width:100%}
+scale {
+    transition: 1s; 
+   }
+   .scale:hover {
+    transform: scale(1.2); /* масштаб */
+   }
