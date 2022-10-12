@@ -57,22 +57,27 @@ background: #f0f0f0;
     position: static;
 }
 /* Левое меню */
-.menu{
-    height: 150px; /* Высота */
+.left { height: 150px; /* Высота */
+    width: 200px; /* Ширина */
+    margin-bottom: 20px; /* Отступ снизу */
+    float: left; /* Левое обтекание */
+    margin: 0 0 30px 30px;
+    display: flex;}
+.clear { height: 150px; /* Высота */
     width: 200px; /* Ширина */
     margin-bottom: 10px; /* Отступ снизу */
     float: left; /* Левое обтекание */
-    margin: 0 0 25px 25px;
-    position: static;
-}
+    margin: 0 0 30px 30px;
+    display: flex;
+    clear: both;}
 /* Правое меню */
 .menu1{
-    height: 80px; /* Высота */
+   height: 150px; /* Высота */
     width: 200px; /* Ширина */
     margin-bottom: 10px; /* Отступ снизу */
-    float: right; /*  */
+    float: right; /*  обтекание */
     margin: 0 0 25px 25px;
-    position: static;
+    display: flex;
 }
 .menuvvod{
     background-color: #fafafa;
@@ -80,6 +85,7 @@ background: #f0f0f0;
   box-shadow:0 0 4px rgba(0,0,0,0.3);
   transition: .3s box-shadow;
   position: static;
+  padding: 5px;
 }
 .input{
     display:block;
@@ -98,8 +104,6 @@ div.widget
   background-color: #fcfdfd;
   border-radius: 9px;
   padding: 25px;
-  padding-right: 30px;
-  margin-bottom: 40px;
   box-shadow: 0px 31px 35px -26px #080c21;
 }
 
@@ -110,14 +114,18 @@ div.date
   font-weight: bold;
   color: rgba(0,0,0,0.5);
 }
-
-div.novosti
-{
-  font-size: 10px;
-  font-family: Arsenal;
-  color: rgba(0,0,0,10);
-position: static;
-}
+  .news {
+    position: relative;
+    padding-left: 90px;
+    width: 165px;
+    height: 259px;
+    background-color: #fcfdfd;
+    border-radius: 9px;
+    padding: 25px;
+    padding-right: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0px 31px 35px -26px #080c21;
+  }
 
 div.temp
 {
@@ -132,12 +140,11 @@ div.panel
 }
 /* Контент */
 .content{
-    width: 850px; 
+    width: 800px; 
   margin: auto;
   margin-bottom: 150px;
   font-family: Arsenal;
      position: static;
-
 }
 /* Подвал */
 h1{
@@ -238,3 +245,36 @@ font-weight: normal;
 table{
   border: n
 }
+.product-wrap {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.product {
+  position: relative;
+  overflow: hidden;
+  padding: 0.8rem;
+  width: 300;
+  height: 400;
+  box-shadow: rgb(79 83 86 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
+  font-size: 1.4rem;
+  color: #999;
+  position: relative;
+  transition: 0.3s;
+}
+.product-image-gap {
+  padding: 0.5rem;
+  border: 1px solid #e1e1e1;
+  background-color: #fff;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.scale {
+  transition: 1s; /* Время эффекта */
+ }
+ .scale:hover {
+  transform: scale(1.2); /* Увеличиваем масштаб */
+ }
